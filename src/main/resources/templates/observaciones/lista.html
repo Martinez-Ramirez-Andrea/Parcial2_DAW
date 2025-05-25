@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Observaciones</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+<body class="container mt-5">
+
+    <h2 class="mb-4">Lista de Observaciones</h2>
+
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <form action="/observaciones/buscar" method="get" class="input-group">
+                <input type="text" name="q" class="form-control" placeholder="Buscar por descripción">
+                <button type="submit" class="btn btn-primary">Buscar</button>
+            </form>
+        </div>
+        <div class="col-md-6 text-end">
+            <a href="/observaciones/nueva" class="btn btn-success">➕ Nueva</a>
+        </div>
+    </div>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Descripción</th>
+                <th>Estudiante</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="o : ${observaciones}">
+                <td th:text="${o.id}">1</td>
+                <td th:text="${o.descripcion}">Ejemplo</td>
+                <td th:text="${o.estudiante.nombre + ' ' + o.estudiante.apellido}">Nombre Estudiante</td>
+                <td>
+                    <a th:href="@{'/observaciones/editar/' + ${o.id}}" class="btn btn-warning btn-sm">Actualizar</a>
+                    <a th:href="@{'/observaciones/eliminar/' + ${o.id}}" class="btn btn-danger btn-sm"
+                       onclick="return confirm('¿Eliminar?')">Eliminar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
