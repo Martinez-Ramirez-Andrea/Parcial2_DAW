@@ -1,9 +1,10 @@
-<<<<<<< HEAD
-# parcial2
+
+# Parcial Práctico #2 – Seguridad y Despliegue en la Nube
 =======
-<<<<<<< HEAD
-# pacialAuth0
-=======
-# parcial2
->>>>>>> 30246c2 (Subiendo proyecto Spring Boot OBSAC a pacialAuth0)
->>>>>>> backup-detached
+Integrantes del equipo:
+
+Edwin Steven Duran Delgado DD21006
+Claudia Elizabeth Martinez Mendez MM18021
+Maybelin Gisselle Guzman Magaña GM22043
+Andrea Lisbeth Martinez Ramirez MR22142
+Tania Sofia Franco Flamenco FF21003
