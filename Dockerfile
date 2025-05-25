@@ -7,6 +7,9 @@ WORKDIR /OBSAC
 # Copiar los archivos del proyecto al contenedor
 COPY . .
 
+# Dar permiso de ejecución al Maven Wrapper
+RUN chmod +x ./mvnw
+
 # Compilar el proyecto usando Maven Wrapper dentro del contenedor
 RUN ./mvnw clean package -DskipTests
 
